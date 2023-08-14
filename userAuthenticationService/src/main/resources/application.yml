@@ -1,0 +1,27 @@
+server:
+  port: 8085
+Spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/userdemo?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+    username: root
+    password: Adityaa8@#
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+       ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+  application:
+    name: user-authentication-service
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
+
+  
